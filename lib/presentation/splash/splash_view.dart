@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 import '../resources/routes_manager.dart';
 
 class SplashView extends StatefulWidget {
-  SplashView({Key? key}) : super(key: key);
+  const SplashView({Key? key}) : super(key: key);
 
   @override
   _SplashViewState createState() => _SplashViewState();
@@ -18,7 +18,11 @@ class _SplashViewState extends State<SplashView> {
   Timer? _timer;
 
   _startDelay() {
-    _timer = Timer(const Duration(seconds: AppConstants.splashDelay), _goNext);
+    _timer = Timer(
+        const Duration(
+          seconds: AppConstants.splashDelay,
+        ),
+        _goNext);
   }
 
   _goNext() {
