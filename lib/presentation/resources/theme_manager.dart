@@ -1,7 +1,7 @@
-import 'package:advanced_flutter_arabic/presentation/resources/color_manager.dart';
-import 'package:advanced_flutter_arabic/presentation/resources/font_manager.dart';
-import 'package:advanced_flutter_arabic/presentation/resources/styles_manager.dart';
-import 'package:advanced_flutter_arabic/presentation/resources/values_manager.dart';
+import 'color_manager.dart';
+import 'font_manager.dart';
+import 'styles_manager.dart';
+import 'values_manager.dart';
 import 'package:flutter/material.dart';
 
 ThemeData getApplicationTheme() {
@@ -49,8 +49,8 @@ ThemeData getApplicationTheme() {
             color: ColorManager.darkGrey, fontSize: FontSize.s16),
         headlineMedium: getRegularStyle(
             color: ColorManager.darkGrey, fontSize: FontSize.s14),
-        titleMedium: getMediumStyle(
-            color: ColorManager.primary, fontSize: FontSize.s16),
+        titleMedium:
+            getMediumStyle(color: ColorManager.primary, fontSize: FontSize.s16),
         bodyLarge: getRegularStyle(color: ColorManager.grey1),
         bodySmall: getRegularStyle(color: ColorManager.grey)),
 
