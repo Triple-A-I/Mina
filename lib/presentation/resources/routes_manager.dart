@@ -1,12 +1,13 @@
-import 'package:advanced_flutter_arabic/presentation/forgot_password/forgot_password_view.dart';
-import 'package:advanced_flutter_arabic/presentation/login/login_view.dart';
-import 'package:advanced_flutter_arabic/presentation/main/main_view.dart';
-import 'package:advanced_flutter_arabic/presentation/onboarding/view/onboarding_view.dart';
-import 'package:advanced_flutter_arabic/presentation/register/register_view.dart';
-import 'package:advanced_flutter_arabic/presentation/resources/strings_manager.dart';
-import 'package:advanced_flutter_arabic/presentation/splash/splash_view.dart';
-import 'package:advanced_flutter_arabic/presentation/store_details/store_details_view.dart';
 import 'package:flutter/material.dart';
+
+import '../forgot_password/forgot_password_view.dart';
+import '../login/login_view.dart';
+import '../main/main_view.dart';
+import '../onboarding/view/onboarding_view.dart';
+import '../register/register_view.dart';
+import '../splash/splash_view.dart';
+import '../store_details/store_details_view.dart';
+import 'strings_manager.dart';
 
 class Routes {
   static const String splashRoute = "/";
@@ -22,7 +23,7 @@ class RouteGenerator {
   static Route<dynamic> getRoute(RouteSettings settings) {
     switch (settings.name) {
       case Routes.splashRoute:
-        return MaterialPageRoute(builder: (_) => SplashView());
+        return MaterialPageRoute(builder: (_) => const SplashView());
       case Routes.loginRoute:
         return MaterialPageRoute(builder: (_) => const LoginView());
       case Routes.onBoardingRoute:
