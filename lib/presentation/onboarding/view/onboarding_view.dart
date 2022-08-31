@@ -8,7 +8,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../../domain/models.dart';
+import '../../../domain/model/models.dart';
 import '../../resources/constants_manager.dart';
 import '../viewmodel/onboarding_viewmodel.dart';
 
@@ -37,7 +37,6 @@ class _OnBoardingViewState extends State<OnBoardingView> {
     return StreamBuilder<SilderViewObject>(
       stream: _viewModel.outputSliderViewObject,
       builder: (BuildContext context, snapshot) {
-        _viewModel.outputSliderViewObject;
         return _getContentWidget(snapshot.data);
       },
     );
@@ -45,9 +44,10 @@ class _OnBoardingViewState extends State<OnBoardingView> {
 
   Widget _getContentWidget(SilderViewObject? silderViewObject) {
     if (silderViewObject?.numberOfSlides == null) {
-      return Container(
-        color: ColorManager.primary,
-        child: const Center(child: Text("EMPTY")),
+      return Center(
+        child: CircularProgressIndicator(
+          color: ColorManager.primary,
+        ),
       );
     } else {
       return Scaffold(
